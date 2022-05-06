@@ -1,0 +1,90 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to right, #00ffcc, #2a7fff);
+}
+
+/* Main Container */
+.calc-container {
+    min-height: 100vh;
+    margin: auto;
+    width: 100%;
+    max-width: 393px;
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(145.27deg, #2e2c2c -4.62%, #0b0a0a 64.58%);
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Output Section */
+.calc-container .output {
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 1rem 0rem;
+    justify-content: space-around;
+    align-items: flex-end;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previousOperand {
+    font-size: 2rem;
+    color: rgba(114, 138, 183, 0.65);
+}
+.output .currentOperand {
+    font-size: 3rem;
+    color: #f2f2f4;
+}
+
+/* Button Section */
+.calc-container .calc-buttons {
+    padding: 3rem 2rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(3.5rem, 70px));
+    grid-template-rows: repeat(5, minmax(3.5rem, 70px));
+    gap: 1.4rem 1rem;
+    width: 100.5%;
+    border-radius: 15px 15px 0px 0px;
+    background: #f0f0f3;
+    bottom: 0;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.calc-buttons button {
+    font-family: 'Oswald', sans-serif;
+    outline: none;
+    border: none;
+    background: #f0f0f3;
+    box-shadow: -7px -7px 8px rgb(255 255 255 / 60%),
+        7px 7px 8px rgb(174 174 192 / 20%);
+    border-radius: 16px;
+    color: #728ab7;
+    font-size: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.calc-buttons button:active {
+    box-shadow: inset -5px -5px 12px rgba(255, 255, 255, 0.6),
+        inset 5px 5px 12px rgba(174, 174, 192, 0.2);
+}
+
+.calc-buttons button.purple {
+    color: #745ff2;
+}
+.calc-buttons button.grey {
+    color: #898989;
+}
